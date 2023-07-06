@@ -13,6 +13,7 @@
     height: 100vh;
     width: 100%;
     position: fixed;
+    z-index: 2;
 }
 
 #preloader p{
@@ -33,19 +34,19 @@
 }
 
 .gradu{
-    position:absolute;
-    height:200px;
-    width:200px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 1;
-    animation: zoom 2s infinite;
-  }
+	position:absolute;
+	height:200px;
+	width:200px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 1;
+	animation: zoom 2s infinite;
+}
   
-  .gradu_move{
+.gradu_move{
     position:absolute;
     height:250px;
     width:250px;
@@ -56,25 +57,61 @@
     margin: auto;
     z-index: -1;
     animation: spin 2s linear infinite;
-  }
+}
 
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 
-  @keyframes zoom {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/* NAVBAR */
+.navbar{
+  	background-color: #515151;
+}
+
+.navbar-nav{
+	margin-top: 15px;
+}
+
+.navbar-nav .nav-item{
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+.navbar-nav .nav-link {
+	font-weight: 500;
+	color: #f9b313;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.active {
+	color: #515151;
+	background: #f9b313;
+}
+
+.navbar-toggler {
+    color: transparent;
+    border-color: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
