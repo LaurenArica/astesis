@@ -15,16 +15,71 @@ typewriter
 // Función para mostrar el preloader y colocar anclar el navbar
 $(function () {
   $(window).on('load', function (event) {
-      $('.preloader').delay(3000).fadeOut(500);
+      $('.preloader').delay(3000).fadeOut(100);
   });
   $(window).on('scroll', function (event) {
       var scroll = $(window).scrollTop();
       if (scroll < 0) {
-          $(".navbar").removeClass("sticky-top");
+          $(".navbar").removeClass("fixed-top");
       } else {
-          $(".navbar").addClass("sticky-top")
+          $(".navbar").addClass("fixed-top")
       }
   });
-
-  
 });
+
+
+// obtener el año actual para el footer
+var annio = (new Date).getFullYear();
+$(document).ready(function() {
+  $("#annio").text( annio );
+});
+
+
+
+// Contador de los atributos de la parte de inicio
+$(document).ready(function() {
+  setTimeout(startCounting, 2500); 
+});
+
+function startCounting() {
+  var counter = $("#numero_experiencia");
+  var counter2 = $("#numero_proyectos");
+  var counter3 = $("#atencion");
+  var count = 1;
+  var count2 = 1;
+  var count3 = 1;
+  
+
+  var interval = setInterval(function() {
+    counter.text(count);
+
+    if (count === 6) {
+      clearInterval(interval);
+    }
+
+    count++;
+  }, 1200);
+
+  var interval2 = setInterval(function() {
+    counter2.text(count2);
+
+    if (count2 === 1800) {
+      clearInterval(interval2);
+    }
+
+    count2++;
+  }, 1);
+
+  var interval3 = setInterval(function() {
+    counter3.text(count3);
+
+    if (count3 === 100) {
+      clearInterval(interval3);
+    }
+
+    count3++;
+  }, 75);
+}
+
+
+console.log("prueba de js")

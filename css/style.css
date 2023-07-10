@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+:root{
+    --main1: #515151;
+    --main2: #f9b313;
+    --main3: #707070;
+    --main4: #fff;
+    --main5: #f9b51b;
+    --main-text: #677f95;
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -8,12 +19,27 @@
     font-family: 'Montserrat';
 }
 
+.section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+a{
+    text-decoration: none;
+}
+H1,h5{
+	color: var(--main1);
+}
+
+/* ======================== */
+/*        PRELOADER         */
+/* ======================== */
 #preloader{ 
     background: #ffff;  
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 2;
+	z-index: 1;
 }
 
 #preloader p{
@@ -21,7 +47,7 @@
     font-size: 1.7rem;
     text-align: center;
     font-weight: 600;
-    color: #515151;
+    color: var(--main1);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,34 +55,35 @@
     transform: translate(-50%, -50%);
 }
 
-#preloader span{
-    color: #f9b313;
+.span-texto{
+    color: var(--main2);
+	font-weight: 800;
 }
 
 .gradu{
-	position:absolute;
-	height:200px;
-	width:200px;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	z-index: 1;
-	animation: zoom 2s infinite;
-}
-  
-.gradu_move{
     position:absolute;
-    height:250px;
-    width:250px;
+    height:200px;
+    width:200px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: -1;
-    animation: spin 2s linear infinite;
+    z-index: 1;
+    animation: zoom 2s infinite;
+}
+  
+.gradu_move{
+	position:absolute;
+	height:250px;
+	width:250px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: -1;
+	animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -80,38 +107,133 @@
 	}
 }
 
+.footer-preloader{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main1);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* =========================================== */
 
-/* NAVBAR */
+
+/* Redes sociales flotantes */
+.wsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:#25d366;
+    position: fixed;
+    bottom:30px;
+    right:10px;
+    cursor: pointer;
+    animation: zoom 2s infinite;
+}
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:#0000ff;
+    position: fixed;
+    bottom:100px;
+    right: 10px;;
+    cursor: pointer;
+    animation: zoom 2s infinite;
+}
+
+.wsp i, .msg i{
+    font-size: 30px;
+    color: white;
+}
+
+/* ======================== */
+/*          NAVBAR          */
+/* ======================== */
 .navbar{
-  	background-color: #515151;
+    max-width: auto;
 }
 
-.navbar-nav{
-	margin-top: 15px;
-}
-
-.navbar-nav .nav-item{
-	margin-left: 15px;
-	margin-bottom: 10px;
+nav, .offcanvas {
+    background-color: var(--main1);
 }
 
 .navbar-nav .nav-link {
-	font-weight: 500;
-	color: #f9b313;
-	text-align: center;
+	font-weight: 600;
+	color: var(--main2);
 	border-radius: 15px;
+	padding-left: 15px;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--main1);
+	background: var(--main2);
+}
+.navbar-nav .nav-link.active {
+	color: var(--main1);
+	background: var(--main2);
+}
+.navbar-toggler, .btn-close {
+  	border: none;
+	border-color: transparent;
+}
+.navbar-toggler:focus, .btn-close:focus{
+	outline: none;
+	box-shadow: none;
 }
 
-.active {
-	color: #515151;
-	background: #f9b313;
+.uil-bars{
+    color: white;
+    font-size: 2rem;
+}
+/* =========================================== */
+
+/* section inicio */
+
+#inicio{
+    height: 100vh;
+    padding: 50px 0;
 }
 
-.navbar-toggler {
-    color: transparent;
-    border-color: transparent;
+.img_inicio{
+    width: 300px;
+
 }
 
-.navbar-toggler:focus {
-    box-shadow: none;
+.btn-suscribir{
+    border-radius: 10px;
+    background-color: var(--main1);
+    color: var(--main2);
 }
+
+.btn-asesoria{
+    border-radius: 10px;
+    background-color: var(--main2);
+    color: var(--main1);
+}
+
+
+
+@media screen and (min-width: 995px) {
+	.navbar{
+		padding: .5rem 3rem;
+	}
+    .img_inicio{
+        width: 450px;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+    .wsp, .msg{
+        right:30px;
+    }
+}
+
