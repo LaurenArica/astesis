@@ -1,4 +1,4 @@
-// Funcion para ejecutar el efecto de la plabra en movimiento
+// Funcion para ejecutar el efecto de movimiento en las palabras
 let app = document.getElementById('preloader-text');
 let typewriter = new Typewriter(app, {
   loop: true,
@@ -12,7 +12,7 @@ typewriter
   .start();
 
 
-// Función para mostrar el preloader y colocar anclar el navbar
+// Función para mostrar el preloader y colocar el fixed el navbar
 $(function () {
   $(window).on('load', function (event) {
       $('.preloader').delay(3000).fadeOut(100);
@@ -28,7 +28,7 @@ $(function () {
 });
 
 
-// obtener el año actual para el footer
+// Obtener el año actual para el footer
 var annio = (new Date).getFullYear();
 $(document).ready(function() {
   $("#annio").text( annio );
@@ -71,7 +71,7 @@ function startCounting() {
   }, 1);
 
   var interval3 = setInterval(function() {
-    counter3.text(count3);
+    counter3.text(count3+"%");
 
     if (count3 === 100) {
       clearInterval(interval3);
@@ -81,5 +81,20 @@ function startCounting() {
   }, 75);
 }
 
+(() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
 
-console.log("prueba de js")
+  Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+      }, false)
+  })
+})()
+
+console.log("JavaScrip")

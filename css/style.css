@@ -16,6 +16,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
     font-family: 'Montserrat';
 }
 
@@ -23,9 +26,14 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    height: 100vh;
+    padding: 50px 0;
 }
 a{
     text-decoration: none;
+}
+button{
+    border: none;
 }
 H1,h5{
 	color: var(--main1);
@@ -197,31 +205,28 @@ nav, .offcanvas {
 }
 /* =========================================== */
 
-/* section inicio */
-
-#inicio{
-    height: 100vh;
-    padding: 50px 0;
-}
-
+/* ======================== */
+/*          INICIO          */
+/* ======================== */
 .img_inicio{
     width: 300px;
-
 }
 
-.btn-suscribir{
+.btn-gray{
     border-radius: 10px;
     background-color: var(--main1);
     color: var(--main2);
 }
 
-.btn-asesoria{
+.btn-yellow{
     border-radius: 10px;
     background-color: var(--main2);
     color: var(--main1);
 }
 
-
+.contadores{
+    flex-direction: column;
+}
 
 @media screen and (min-width: 995px) {
 	.navbar{
@@ -235,5 +240,13 @@ nav, .offcanvas {
     .wsp, .msg{
         right:30px;
     }
+    .contadores{
+        flex-direction: row;
+    }
 }
 
+@media screen and (min-width: 470px) {
+    .contadores{
+        flex-direction: row;
+    }
+}
