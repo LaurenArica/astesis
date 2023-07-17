@@ -15,7 +15,7 @@ typewriter
 // Función para mostrar el preloader y colocar el fixed el navbar
 $(function () {
   $(window).on('load', function (event) {
-      $('.preloader').delay(3000).fadeOut(100);
+      $('.preloader').delay(2000).fadeOut(100);
   });
   $(window).on('scroll', function (event) {
       var scroll = $(window).scrollTop();

@@ -209,7 +209,8 @@ nav, .offcanvas {
 /*          INICIO          */
 /* ======================== */
 .img_inicio{
-    width: 300px;
+    width: 280px;
+    height: 450px;
 }
 
 .btn-gray{
@@ -233,9 +234,9 @@ nav, .offcanvas {
 		padding: .5rem 3rem;
 	}
     .img_inicio{
-        width: 450px;
-        margin-top: 50px;
-        margin-right: 20px;
+        width: 250px;
+        /* margin-top: 50px; */
+        margin-left: 20px;
     }
     .wsp, .msg{
         right:30px;
