@@ -24,29 +24,45 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body  data-bs-spy="scroll">
+
     <!-- Seccion de preloader -->
-    <div id="preloader" class="preloader">
+    <section id="preloader" class="preloader">
         <p>Bienvenido a <span class="span-texto" id="preloader-text"></span></p>
         <img src="./img/gradu_preloader.png" alt="" class="gradu">
         <img src="./img/disenio-bottom.png" alt="" class="gradu_move">
         <div class="footer-preloader">
           	<span>Copyright © <span id="annio"></span> Todos los Derechos Reservados de As Tesis</span>
         </div>
-    </div>
+    </section>
     <!-- Fin preloader -->
 
     <!-- Redes sociales flotantes -->
-    <div class="wsp">
+    <!-- <section class="wsp">
       	<a href="https://api.whatsapp.com/send?phone=123456789&text=Hola, gracias por comunicarte con nosotros" target="_blank">
           	<i class="uil uil-whatsapp"></i>
       	</a>
-    </div>
-    <div class="msg">
+    </section>
+    <section class="msg">
       	<a href="https://api.whatsapp.com/send?phone=123456789&text=Hola, gracias por comunicarte con nosotros" target="_blank">
           	<i class="uil uil-facebook-messenger"></i>
       	</a>
-    </div>
+    </section> -->
 	<!-- Fin de redes sociales flotantes -->
+
+
+    <section class="contenedor">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href=""><i class="bi bi-facebook fs-3"></i></a>
+            <a href=""><i class="bi bi-instagram fs-3"></i></a>
+            <a href=""><i class="bi bi-youtube fs-3"></i></a>
+            <a href=""><i class="bi bi-tiktok fs-3"></i></a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="uil uil-plus"></label>
+        </div>
+    </section>
+
 
     <!-- Inicio de navbar -->
     <header>
@@ -108,21 +124,16 @@
 		<div class="container px-5">
 			<div class="row gx-5 align-items-center pb-3">
 				<div class="col-md-5">
-					<!-- <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-						<div class="profile mb-3 bg-gradient-primary-to-secondary">
-							<img class="img_inicio" src="./img/gradu_preloader.png" alt="..." />
-						</div>
-					</div> -->
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active mb-5">
-                                <img src="./img/banner_1.png" class="img_inicio d-block w-100" alt="...">
+                            <div class="carousel-item active mb-5 ">
+                                <img src="./img/banner_2.png" class="img_inicio" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/banner_2.png" class="img_inicio d-block w-100" alt="...">
+                                <img src="./img/banner_1.png" class="img_inicio" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="./img/banner_1.png" class="img_inicio d-block w-100" alt="...">
+                                <img src="./img/banner_2.png" class="img_inicio" alt="...">
                             </div>
                         </div>
                     </div>
@@ -132,28 +143,140 @@
 						<h1 class="fw-bolder display-3 mb-3">Bienvenido a <p class="span-texto m-0">As Tesis</p></h1>
 						<h3 class=" mb-3">Tu alidado en tu graduación</h3>
 						<div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
-							<a class="btn-gray px-3 py-3  fs-6 fw-bolder" target="_blank" href data-bs-toggle="modal" data-bs-target="#exampleModal" ">Suscríbete</a>
-							<a class="btn-yellow px-3 py-3  fs-6 fw-bolder" href="https://api.whatsapp.com/send?phone=123456789&text=Hola, bienvdenido a AS TESIS, gracias por comunicarte con nosotros" target="_blank">Asesoria</a>
+							<a class="btn-gray px-3 py-3  fs-6 fw-bolder" target="_blank" href data-bs-toggle="modal" data-bs-target="#exampleModal" ">
+          	                    <i class="fs-5 text-white uil uil-thumbs-up"></i>
+                                Suscríbete
+                            </a>
+							<a class="btn-yellow px-3 py-3  fs-6 fw-bolder" href="https://api.whatsapp.com/send?phone=123456789&text=Hola, bienvdenido a AS TESIS, gracias por comunicarte con nosotros" target="_blank">
+                                <i class="fs-5 fw-bolder uil uil-whatsapp text-white"></i>
+                                Asesoria
+                            </a>
 						</div>
 					</div>
 				</div>
+                <div class="contadores container d-flex align-items-center justify-content-between mt-2">
+                    <p class="d-flex flex-column text-center">
+                        <span id="numero_experiencia" class="bi-plus text-center fs-3">6</span>
+                        <span class="fs-5">Años de experiencia</span>
+                    </p>
+                    <p class="d-flex flex-column text-center">
+                        <span id="numero_proyectos" class="bi-plus text-center fs-3">1800</span>
+                        <span class="fs-5">Proyectos asesorados</span>
+                    </p>
+                    <p class="d-flex flex-column text-center">
+                        <span id="atencion" class="text-center fs-3">100</span>
+                        <span class="fs-5">Atención personalizada</span>
+                    </p>
+                </div>  
 			</div>
-			<div class="contadores container d-flex align-items-center justify-content-between mt-2">
-				<p class="d-flex flex-column text-center">
-                    <span id="numero_experiencia" class="bi-plus text-center fs-3">6</span>
-                    <span class="fs-5">Años de experiencia</span>
-                </p>
-				<p class="d-flex flex-column text-center">
-                    <span id="numero_proyectos" class="bi-plus text-center fs-3">1800</span>
-                    <span class="fs-5">Proyectos asesorados</span>
-                </p>
-				<p class="d-flex flex-column text-center">
-                    <span id="atencion" class="text-center fs-3">100</span>
-                    <span class="fs-5">Atención personalizada</span>
-                </p>
-			</div>  
 		</div>
 	</section>
+
+
+    <!--Seccion de Servicios-->
+    <h2 class="title-section" id="servicios"><b>Nuestros</b> <b><font font-weight="800"; color="#f9b313">Servicios</font></b></h2>
+    <br>
+    <section class="nssection">
+        <div class="nstitle">
+            <!-- <h3 class="mb-3">Algunos de<br>Nuestros<p class="span-texto m-0"> Servicios</p></h3> -->
+            <h3 class="mb-3">Algunos de<br>Nuestros <b><font color="#f9b313">Servicios</font></b></h3>
+        </div>
+        <div class="nsdescription">
+            <p class="text-justify">Contamos con diversos Servicios de Investigacion Academica<br>
+                con la mejor calidad de la mano de Asesores <br> altamente capacitados de todas las carreras</p>
+        </div>
+    </section>
+
+    
+    <section class="nssectioncard">
+        <div class="container-container">
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio Estadistico.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime aliquam architecto tempora itaque hic dolores doloremque veritatis, quo fuga adipisci ad. Exercitationem, natus alias.</p>
+                </div>
+            </div>
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio Parafraseo.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">asdasdadsasdasdadasd.</p>
+                </div>
+            </div>
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio Proyecto.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime aliquam architecto tempora itaque hic dolores doloremque veritatis, quo fuga adipisci ad. Exercitationem, natus alias.</p>
+                </div>
+            </div>
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio TesisPos.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime aliquam architecto tempora itaque hic dolores doloremque veritatis, quo fuga adipisci ad. Exercitationem, natus alias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nssection">
+        <div class="nstitle">
+            <p class="text-justify" style="text-align: center;">Contamos con diversos Servicios de Investigacion Academica<br>
+                con la mejor calidad de la mano de Asesores <br> altamente capacitados de todas las carreras</p>
+        </div>
+        <div class="nsdescription">
+
+        </div>
+
+    </section>
+    
+
+    <!--Fin Seccion de Servicios-->
+
+
+
+
+    <!--Seccion Ubicacion-->
+    <section>
+
+    </section>
+    <!--Fin Seccion Ubicacion-->
+
+
+
+
+    <!--Sobre Nosotros-->
+
+    <!--Fin de Nosotros-->
+
+
+
+
+    <!--Solicitar Informacion-->
+
+    <!--Fin Solicitar Informacion-->
+
+
+
+
+    <!--Seccion experiencia-->
+
+    <!--Fin Seccion experiencia-->
+
+
+
+
+    <!--Preguntas Frecuentes-->
+
+    <!--Fin Preguntas Frecuentes-->
+
+
 
 	
     <!-- Modal de suscripcion-->
