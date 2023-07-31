@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS TESIS</title>
+
+	<!-- CDN de BOOTStrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- ====== LINKS EXTERNOS ====== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <link rel="shortcut icon" href="./img/AsTesisIcono.png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body  data-bs-spy="scroll">
+   
+    <!-- Redes sociales flotantes -->
+    <!-- <section class="wsp">
+      	<a href="https://api.whatsapp.com/send?phone=123456789&text=Hola, gracias por comunicarte con nosotros" target="_blank">
+          	<i class="uil uil-whatsapp"></i>
+      	</a>
+    </section>
+    <section class="msg">
+      	<a href="https://api.whatsapp.com/send?phone=123456789&text=Hola, gracias por comunicarte con nosotros" target="_blank">
+          	<i class="uil uil-facebook-messenger"></i>
+      	</a>
+    </section> -->
+	<!-- Fin de redes sociales flotantes -->
+
+
+    <section class="contenedor">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href=""><i class="bi bi-facebook fs-3"></i></a>
+            <a href=""><i class="bi bi-instagram fs-3"></i></a>
+            <a href=""><i class="bi bi-youtube fs-3"></i></a>
+            <a href=""><i class="bi bi-tiktok fs-3"></i></a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="uil uil-plus"></label>
+        </div>
+    </section>
+
+
+    <!-- Inicio de navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <!-- NAV CONTAINER START -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#inicio">
+                    <img src="./img/logoFooter.png" alt="" width="150px" height="50px">
+                </a>
+                <!-- NAV BUTTON  -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="uil uil-bars"></span>
+                </button>
+                <!-- OFFCANVAS MAIN CONTAINER START -->
+                <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1">
+                    <div class="offcanvas-header" data-bs-theme="dark">
+                        <a class="navbar-brand" href="#inicio">
+                            <img src="./img/logoFooter.png" alt="" width="150px" height="50px">
+                        </a>
+                        <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <!-- OFF CANVAS MENU LINKS  START-->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-lg-end gap-3 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#servicios">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#master">Masterclas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#invetigacion">Investigación</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Contacto</a>
+                            </li>
+                        </ul>
+                        <!-- enlaces redes sociales -->
+        
+                        <div class="d-lg-none align-self-center py-3">
+                          	<a href=""><i class="bi bi-facebook px-2 text-info fs-2"></i></a>
+                          	<a href=""><i class="bi bi-instagram px-2 text-info fs-2"></i></a>
+                          	<a href=""><i class="bi bi-youtube px-2 text-info fs-2"></i></a>
+                          	<a href=""><i class="bi bi-tiktok px-2 text-info fs-2"></i></a>
+                        </div>
+                    </div>
+              	</section>
+              	<!-- OFFCANVAS MAIN CONTAINER END  -->
+            </div>
+		</nav>
+		<!-- FIn de navbar -->
+    </header> 
+
+	<section class="section" id="inicio">
+		<div class="container px-5">
+			<div class="row gx-5 align-items-center pb-3">
+				<div class="col-md-5">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active mb-5 ">
+                                <img src="./img/banner_2.png" class="img_inicio" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/banner_1.png" class="img_inicio" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/banner_2.png" class="img_inicio" alt="...">
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="col-md-7">
+					<div class="text-center">
+						<h1 class="fw-bolder display-3 mb-3">Bienvenido a <p class="span-texto m-0">As Tesis</p></h1>
+						<h3 class=" mb-3">Tu alidado en tu graduación</h3>
+						<div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+							<a class="btn-gray px-3 py-3  fs-6 fw-bolder" target="_blank" href data-bs-toggle="modal" data-bs-target="#exampleModal" ">
+          	                    <i class="fs-5 text-white uil uil-thumbs-up"></i>
+                                Suscríbete
+                            </a>
+							<a class="btn-yellow px-3 py-3  fs-6 fw-bolder" href="https://api.whatsapp.com/send?phone=123456789&text=Hola, bienvdenido a AS TESIS, gracias por comunicarte con nosotros" target="_blank">
+                                <i class="fs-5 fw-bolder uil uil-whatsapp text-white"></i>
+                                Asesoria
+                            </a>
+						</div>
+					</div>
+				</div>
+                <div class="contadores container d-flex align-items-center justify-content-between mt-2">
+                    <p class="d-flex flex-column text-center">
+                        <span id="numero_experiencia" class="bi-plus text-center fs-3">6</span>
+                        <span class="fs-5">Años de experiencia</span>
+                    </p>
+                    <p class="d-flex flex-column text-center">
+                        <span id="numero_proyectos" class="bi-plus text-center fs-3">1800</span>
+                        <span class="fs-5">Proyectos asesorados</span>
+                    </p>
+                    <p class="d-flex flex-column text-center">
+                        <span id="atencion" class="text-center fs-3">100</span>
+                        <span class="fs-5">Atención personalizada</span>
+                    </p>
+                </div>  
+			</div>
+		</div>
+	</section>
+
+
+    <!--Seccion de Servicios-->
+    <h2 class="title-section" id="servicios"><b>Nuestros</b> <b><font font-weight="800"; color="#f9b313">Servicios</font></b></h2>
+    <br>
+    <section class="nssection">
+        <div class="nstitle">
+            <!-- <h3 class="mb-3">Algunos de<br>Nuestros<p class="span-texto m-0"> Servicios</p></h3> -->
+            <h3 class="mb-3">Algunos de<br>Nuestros <b><font color="#f9b313">Servicios</font></b></h3>
+        </div>
+        <div class="nsdescription">
+            <p class="text-justify">Contamos con diversos Servicios de Investigacion Academica<br>
+                con la mejor calidad de la mano de Asesores <br> altamente capacitados de todas las carreras</p>
+        </div>
+    </section>
+
+    
+    <section class="nssectioncard">
+        <div class="container-container">
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio Estadistico.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime aliquam architecto tempora itaque hic dolores doloremque veritatis, quo fuga adipisci ad. Exercitationem, natus alias.</p>
+                </div>
+            </div>
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio Parafraseo.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">asdasdadsasdasdadasd.</p>
+                </div>
+            </div>
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio Proyecto.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime aliquam architecto tempora itaque hic dolores doloremque veritatis, quo fuga adipisci ad. Exercitationem, natus alias.</p>
+                </div>
+            </div>
+            <div class="item-container">
+                <img class="item-img" src="img/servicios/Servicio TesisPos.png" alt="">
+                <div class="hover-container">
+                    <p class="hover-header">Titulo</p>
+                    <a class="hover-btn" href="#">Informacion</a>
+                    <p class="hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, maxime aliquam architecto tempora itaque hic dolores doloremque veritatis, quo fuga adipisci ad. Exercitationem, natus alias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nssection">
+        <div class="nstitle">
+            <p class="text-justify" style="text-align: center;">Contamos con diversos Servicios de Investigacion Academica<br>
+                con la mejor calidad de la mano de Asesores <br> altamente capacitados de todas las carreras</p>
+        </div>
+        <div class="nsdescription">
+
+        </div>
+
+    </section>
+    
+
+    <!--Fin Seccion de Servicios-->
+
+
+
+
+    <!--Seccion Ubicacion-->
+    <section>
+
+    </section>
+    <!--Fin Seccion Ubicacion-->
+
+
+
+
+    <!--Sobre Nosotros-->
+
+    <!--Fin de Nosotros-->
+
+
+
+
+    <!--Solicitar Informacion-->
+
+    <!--Fin Solicitar Informacion-->
+
+
+
+
+    <!--Seccion experiencia-->
+
+    <!--Fin Seccion experiencia-->
+
+
+
+
+    <!--Preguntas Frecuentes-->
+
+    <!--Fin Preguntas Frecuentes-->
+
+
+
+	
+    <!-- Modal de suscripcion-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 fw-bolder" id="exampleModalLabel">Suscríbete</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" method="POST" id="miFormulario" action="registro.php">
+                        <div class="mb-1">
+                            <h2 class="modal-title fs-6">Suscríbete para recibir información de nuestras promociones</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <label for="nombres" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="nombres" name="nombres" required>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label for="apellidos" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <label for="telefono1" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" id="telefono1" name="telefono1" required>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label for="telefono2" class="form-label">Telefono 2</label>
+                                <input type="text" class="form-control" id="telefono2" name="telefono2">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-2">    
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label for="comentario" class="form-label">Comentario</label>
+                            <textarea name="comentario" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <button class="btn-yellow w-100 px-3 py-2 fw-bolder btn-confirm" onclick="guardarRegistro()" type="submit" id="enviar">Enviar</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn-gray w-100 px-3 py-2 fw-bolder" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function showAlert(message, icon) {
+            Swal.fire({
+                title: 'Mensaje del servidor',
+                text: message,
+                icon: icon,
+                showConfirmButton: 'OK'
+            }).then(function (result) {
+                if (result.isConfirmed) {
+                    window.location.reload();
+                }
+            });
+        }
+
+        document.getElementById('miFormulario').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'registro.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                   
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        showAlert(response.message, response.icon);
+                    } else {
+                        showAlert('Error al procesar el formulario', 'error');
+                    }
+                }
+            };
+            xhr.send(new URLSearchParams(new FormData(event.target)).toString());
+        });
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

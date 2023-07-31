@@ -1,22 +1,5 @@
-// Funcion para ejecutar el efecto de movimiento en las palabras
-let app = document.getElementById('preloader-text');
-let typewriter = new Typewriter(app, {
-  loop: true,
-  delay: 100,
-});
-typewriter
-  .pauseFor(500)
-  .typeString('AS TESIS')
-  .pauseFor(400)
-  .deleteChars(10)
-  .start();
-
-
 // Función para mostrar el preloader y colocar el fixed el navbar
 $(function () {
-  $(window).on('load', function (event) {
-      $('.preloader').delay(2000).fadeOut(100);
-  });
   $(window).on('scroll', function (event) {
       var scroll = $(window).scrollTop();
       if (scroll < 0) {
@@ -25,16 +8,8 @@ $(function () {
           $(".navbar").addClass("fixed-top")
       }
   });
+
 });
-
-
-// Obtener el año actual para el footer
-var annio = (new Date).getFullYear();
-$(document).ready(function() {
-  $("#annio").text( annio );
-});
-
-
 
 // Contador de los atributos de la parte de inicio
 $(document).ready(function() {
@@ -80,21 +55,3 @@ function startCounting() {
     count3++;
   }, 75);
 }
-
-(() => {
-  'use strict'
-  const forms = document.querySelectorAll('.needs-validation')
-
-  Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-      }, false)
-  })
-})()
-
-console.log("JavaScrip")
