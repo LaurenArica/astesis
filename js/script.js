@@ -11,6 +11,15 @@ $(function () {
 
 });
 
+// Funcion para el efecto hover en beneficios
+$(document).ready(function () {
+  $(".count-box").hover(function () {
+      $(this).find("i").css("background-color", "#f9b313"); 
+  }, function () {
+      $(this).find("i").css("background-color", ""); 
+  });
+});
+
 // Contador de los atributos de la parte de inicio
 $(document).ready(function() {
   setTimeout(startCounting, 2500); 
@@ -55,3 +64,112 @@ function startCounting() {
     count3++;
   }, 75);
 }
+
+
+/**/
+/*Seccion*/
+const menuItems = document.querySelectorAll('.menu-item');
+const sections = document.querySelectorAll('.sectionselect');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const selectedSection = item.dataset.section;
+    sections.forEach(section => {
+      if (section.id === selectedSection) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  });
+});
+
+/**
+* Testimonials slider
+*/
+new Swiper('.testimonials-slider', {
+speed: 500,
+loop: true,
+autoplay: {
+delay: 2000,
+disableOnInteraction: false
+},
+slidesPerView: 'auto',
+pagination: {
+el: '.swiper-pagination',
+type: 'bullets',
+clickable: true
+}
+});
+
+
+
+
+/*Carrusel de video */      
+$(document).ready(function(){
+
+//--------------Slider Secundario--------------//
+const slider_secundario=$(".slider_secundario")
+
+slider_secundario.owlCarousel({
+    autoplay:true,
+    loop:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        480:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        800:{
+            items:4
+        }
+    }	
+});
+
+$('#btn_prev_slider_secundario').on('click',function(){
+    slider_secundario.trigger('prev.owl.carousel');
+});
+
+$('#btn_next_slider_secundario').on('click',function(){
+    slider_secundario.trigger('next.owl.carousel');
+});
+});
+
+
+
+
+
+
+
+//*carrusel de imagenes */
+var swiper = new Swiper(".mySwiper",{
+effect:"coverflow",
+grabCursor: true,
+centeredSlides: true,
+slidesPerView: "auto",
+coverflowEffect: {
+rotate: 15,
+strech:0,
+depth:300,
+modifier:1,
+slideShadow:true,
+},
+loop: true,
+})
+
+
+
+
+window.addEventListener('scroll', function() {
+const navbar = document.querySelector('.navbar');
+if (window.scrollY > 10) {
+  navbar.classList.add('navbar-scrolled');
+} else {
+  navbar.classList.remove('navbar-scrolled');
+}
+});
