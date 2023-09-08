@@ -1,15 +1,15 @@
 // Función para mostrar el preloader y colocar el fixed el navbar
-$(function () {
-  $(window).on('scroll', function (event) {
-      var scroll = $(window).scrollTop();
-      if (scroll < 0) {
-          $(".navbar").removeClass("fixed-top");
-      } else {
-          $(".navbar").addClass("fixed-top")
-      }
-  });
+// $(function () {
+//   $(window).on('scroll', function (event) {
+//       var scroll = $(window).scrollTop();
+//       if (scroll < 0) {
+//           $(".navbar").removeClass("fixed-top");
+//       } else {
+//           $(".navbar").addClass("fixed-top")
+//       }
+//   });
 
-});
+// });
 
 // Funcion para el efecto hover en beneficios
 $(document).ready(function () {
@@ -173,3 +173,28 @@ if (window.scrollY > 10) {
   navbar.classList.remove('navbar-scrolled');
 }
 });
+
+
+const dropdowns = document.querySelectorAll('.dropdown__list');
+
+dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('.dropdown__link');
+    const checkbox = dropdown.querySelector('.dropdown__check');
+
+    link.addEventListener('click', () => {
+        dropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+                const otherCheckbox = otherDropdown.querySelector('.dropdown__check');
+                otherCheckbox.checked = false;
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+
