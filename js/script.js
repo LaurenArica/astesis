@@ -175,6 +175,12 @@ if (window.scrollY > 10) {
 });
 
 
+
+
+
+
+
+
 const dropdowns = document.querySelectorAll('.dropdown__list');
 
 dropdowns.forEach(dropdown => {
